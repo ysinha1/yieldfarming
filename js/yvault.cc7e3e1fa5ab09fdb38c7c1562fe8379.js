@@ -184,7 +184,7 @@ async function main() {
 
         _print(`Daily ROI in USD  : ${toFixed(vault.ROI_day, 4)}%`)
         _print(`Weekly ROI in USD : ${toFixed(vault.ROI_week, 4)}%\n`)
-        _print(`APY (daily)       : ${toFixed(vault.ROI_day * 365, 4)}%`)
+        _print(`APY (daily)       : ${toFixed(Math.pow(1+(vault.ROI_day)/100 - 1,365), 4)}%`)
         _print(`APY (weekly)      : ${toFixed(vault.ROI_week * 52, 4)}% \n\n`)
     }
 
